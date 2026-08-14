@@ -109,14 +109,14 @@ export function ContactSection({ profile }: { profile: Profile }) {
             {displayEmail ? (
               <a
                 href={`mailto:${displayEmail}`}
-                className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary w-full min-w-0"
+                className="lift flex items-center gap-3 sm:gap-4 rounded-2xl border border-border bg-surface p-4 sm:p-5 hover:border-primary w-full min-w-0"
               >
                 <Mail className="size-5 text-primary shrink-0" aria-hidden />
                 <span className="min-w-0 flex-1">
                   <span className="block text-xs uppercase tracking-wide text-muted-foreground">
                     Email
                   </span>
-                  <span className="font-medium text-sm sm:text-base break-all block">
+                  <span className="font-medium text-[13px] sm:text-base whitespace-nowrap block">
                     {displayEmail}
                   </span>
                 </span>
