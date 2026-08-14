@@ -145,9 +145,7 @@ export function NavBar({ resumeUrl }: { resumeUrl?: string }) {
                                 : "border-blue-200/90 group-hover:border-blue-500",
                             )}
                           >
-                            {isActive ? (
-                              <span className="size-2 rounded-full bg-blue-600" />
-                            ) : null}
+                            {isActive ? <span className="size-2 rounded-full bg-blue-600" /> : null}
                           </span>
 
                           {/* Stepper Label */}

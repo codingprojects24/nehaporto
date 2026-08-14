@@ -2,26 +2,30 @@ import { initializeApp, getApps, type FirebaseApp } from "firebase/app";
 import { getAuth, type Auth } from "firebase/auth";
 import { getFirestore, type Firestore } from "firebase/firestore";
 
-import { getFirebaseConfig } from "./firebase-config.functions";
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyCFVITRyrMCHlan42ElD5kiZNK858S3Vu4",
+  authDomain: "nehaporto.firebaseapp.com",
+  projectId: "nehaporto",
+  storageBucket: "nehaporto.firebasestorage.app",
+  messagingSenderId: "356039771111",
+  appId: "1:356039771111:web:7b307c9705f860f6ccb342",
+  measurementId: "G-SSB2Z5VP5X",
+};
 
-let appPromise: Promise<FirebaseApp> | null = null;
+let app: FirebaseApp | null = null;
 
-export function getFirebaseApp() {
-  if (!appPromise) {
-    appPromise = (async () => {
-      const existing = getApps();
-      if (existing.length) return existing[0]!;
-      const config = await getFirebaseConfig();
-      return initializeApp(config);
-    })();
+export function getFirebaseApp(): FirebaseApp {
+  if (!app) {
+    const existing = getApps();
+    app = existing.length ? existing[0]! : initializeApp(FIREBASE_CONFIG);
   }
-  return appPromise;
+  return app;
 }
 
-export async function getDb(): Promise<Firestore> {
-  return getFirestore(await getFirebaseApp());
+export function getDb(): Firestore {
+  return getFirestore(getFirebaseApp());
 }
 
-export async function getFirebaseAuth(): Promise<Auth> {
-  return getAuth(await getFirebaseApp());
+export function getFirebaseAuth(): Auth {
+  return getAuth(getFirebaseApp());
 }

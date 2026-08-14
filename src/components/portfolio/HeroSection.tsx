@@ -231,20 +231,20 @@ export function HeroSection({ profile }: { profile: Profile }) {
         {/* Highlight Stats Row */}
         <div className="mt-20 grid grid-cols-2 gap-4 md:grid-cols-4">
           {(profile.stats &&
-            profile.stats.length > 0 &&
-            !profile.stats.some(
-              (s) =>
-                s.value === "1+" ||
-                s.value === "5+" ||
-                s.label?.toLowerCase().includes("year of experience"),
-            )
+          profile.stats.length > 0 &&
+          !profile.stats.some(
+            (s) =>
+              s.value === "1+" ||
+              s.value === "5+" ||
+              s.label?.toLowerCase().includes("year of experience"),
+          )
             ? profile.stats
             : [
-              { value: "6+", label: "Months of Experience" },
-              { value: "2+", label: "Projects Built" },
-              { value: "∞", label: "Always Improving" },
-              { value: "100%", label: "Dedication" },
-            ]
+                { value: "6+", label: "Months of Experience" },
+                { value: "2+", label: "Projects Built" },
+                { value: "∞", label: "Always Improving" },
+                { value: "100%", label: "Dedication" },
+              ]
           ).map((stat, i) => (
             <motion.div
               key={stat.label}

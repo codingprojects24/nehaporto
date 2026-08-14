@@ -150,7 +150,9 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             </div>
           </div>
 
-          <h3 className="mt-4 text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">{project.title}</h3>
+          <h3 className="mt-4 text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
+            {project.title}
+          </h3>
           <p className="mt-3 leading-relaxed text-text-secondary">
             {project.longDescription || project.description}
           </p>
