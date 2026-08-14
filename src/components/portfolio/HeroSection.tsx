@@ -52,7 +52,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] overflow-hidden pt-18 pb-14 sm:pt-20 md:pt-24 md:pb-20"
+      className="relative min-h-[75vh] overflow-hidden pt-10 pb-10 sm:pt-12 md:pt-14 md:pb-14"
     >
       {/* Subtle Dot Grid Background */}
       <div
@@ -71,15 +71,15 @@ export function HeroSection({ profile }: { profile: Profile }) {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
           {/* Left Column: Headlines & Call to Action */}
           <div>
             {/* Greeting Badge */}
             <motion.div
-              initial={{ opacity: 0, y: -12 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/90 px-4 py-1.5 text-xs font-medium text-slate-600 shadow-sm backdrop-blur-sm"
+              transition={{ duration: 0.4 }}
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/90 px-3.5 py-1.5 text-xs font-medium text-slate-600 shadow-sm backdrop-blur-sm"
             >
               <span aria-hidden="true">👋</span>
               <span>Hey there, I&apos;m</span>
@@ -87,10 +87,10 @@ export function HeroSection({ profile }: { profile: Profile }) {
 
             {/* Main Headline with dual-color name and orange dot */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="mt-5"
+              transition={{ delay: 0.15, duration: 0.5 }}
+              className="mt-3.5"
             >
               <h1
                 style={{ fontFamily: "'Syne', sans-serif" }}
@@ -108,8 +108,8 @@ export function HeroSection({ profile }: { profile: Profile }) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="mt-6 flex items-center gap-2 font-mono text-sm sm:text-base text-slate-600"
+              transition={{ delay: 0.3, duration: 0.4 }}
+              className="mt-5 flex items-center gap-2 font-mono text-sm sm:text-base text-slate-600"
             >
               <Sparkles className="size-4 text-orange-400" />
               <span>I&apos;m a</span>
@@ -118,10 +118,10 @@ export function HeroSection({ profile }: { profile: Profile }) {
 
             {/* Bio Paragraph */}
             <motion.p
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="mt-6 max-w-xl text-sm sm:text-base leading-relaxed text-slate-600"
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-slate-600"
             >
               {profile.heroSubtext ||
                 "I craft fast, intelligent and beautifully engineered products — blending modern web stacks with Generative AI to ship experiences that feel inevitable."}
@@ -129,10 +129,10 @@ export function HeroSection({ profile }: { profile: Profile }) {
 
             {/* Buttons & Socials Row */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="mt-9 flex flex-wrap items-center gap-3"
+              transition={{ delay: 0.55, duration: 0.5 }}
+              className="mt-7 flex flex-wrap items-center gap-3"
             >
               {/* Primary CTA */}
               <a
@@ -152,7 +152,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               </a>
 
               {/* Social Buttons */}
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 {[
                   { href: profile.github, Icon: Github, label: "GitHub" },
                   { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
@@ -179,28 +179,28 @@ export function HeroSection({ profile }: { profile: Profile }) {
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
-            className="relative mx-auto flex w-full max-w-md items-center justify-center lg:max-w-none"
+            transition={{ delay: 0.3, duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }}
+            className="relative mx-auto flex w-full max-w-[290px] sm:max-w-[320px] lg:max-w-[340px] items-center justify-center"
           >
             {/* Curved dashed background line accent framing */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -inset-4 sm:-inset-6 -rotate-3 rounded-[44px] sm:rounded-[52px] border-2 border-dashed border-blue-300/50"
+              className="pointer-events-none absolute -inset-3 sm:-inset-4 -rotate-3 rounded-[34px] sm:rounded-[40px] border-2 border-dashed border-blue-300/50"
             />
 
             {/* Portrait Image Card */}
-            <div className="relative w-full max-w-sm sm:max-w-md overflow-hidden rounded-[32px] sm:rounded-[40px] border border-slate-200/80 bg-gradient-to-b from-slate-100 to-slate-200 shadow-2xl">
+            <div className="relative w-full overflow-hidden rounded-[26px] sm:rounded-[32px] border border-slate-200/80 bg-gradient-to-b from-slate-100 to-slate-200 shadow-xl">
               <img
                 src={image}
                 alt={profile.name}
-                className="aspect-[4/4.6] w-full object-cover object-top"
+                className="aspect-[4/4.5] w-full object-cover object-top"
               />
 
               {/* Status Pill Badge at bottom left */}
-              <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/95 px-4 py-2 text-xs font-bold text-slate-900 shadow-lg backdrop-blur-md">
-                <span className="relative flex size-2.5">
+              <div className="absolute bottom-3.5 left-3.5 flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/95 px-3.5 py-1.5 text-[11px] font-bold text-slate-900 shadow-md backdrop-blur-md">
+                <span className="relative flex size-2">
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                  <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                  <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
                 </span>
                 <span>Open to Opportunities</span>
               </div>

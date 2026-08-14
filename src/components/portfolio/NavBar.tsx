@@ -33,8 +33,8 @@ export function NavBar({ resumeUrl }: { resumeUrl?: string }) {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-slate-200/80 bg-white/85 py-2.5 shadow-sm backdrop-blur-md"
-          : "bg-transparent py-3.5",
+          ? "border-b border-slate-200/80 bg-white/85 py-2 shadow-sm backdrop-blur-md"
+          : "bg-transparent py-2.5",
       )}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8">
