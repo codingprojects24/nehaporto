@@ -10,7 +10,7 @@ const LOGO_MAP: Record<string, string> = {
   "ai-for-beginners": "/logos/hp.png",
   "ai-hackathon-2026": "/logos/xfactor.png",
   "enterprise-design-thinking": "/logos/ibm.png",
-  "ai-skills-passport": "/logos/microsoft.svg",
+  "ai-skills-passport": "/logos/microsoft.png",
   "quizoff-2026": "/logos/unstop.png",
 };
 
@@ -61,7 +61,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     issuer: "EY · Microsoft",
     date: "2026",
     credentialUrl: "",
-    badgeImageUrl: "/logos/microsoft.svg",
+    badgeImageUrl: "/logos/microsoft.png",
     description: "Completed training covering AI, employability, technology, and business skills.",
     order: 5,
   },

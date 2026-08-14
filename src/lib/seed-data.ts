@@ -120,7 +120,7 @@ export const seedExperience: Experience[] = [
 export const seedCertifications: Certification[] = [
   {
     id: "google-ai-pro",
-    title: "Google AI Professional Certificate",
+    title: "Google AI Fundamentals Certificate",
     issuer: "Google · Coursera",
     date: "2026",
     credentialUrl: "",
