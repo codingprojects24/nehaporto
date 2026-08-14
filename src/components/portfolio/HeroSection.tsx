@@ -52,7 +52,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24"
+      className="relative min-h-[85vh] overflow-hidden pt-18 pb-14 sm:pt-20 md:pt-24 md:pb-20"
     >
       {/* Subtle Dot Grid Background */}
       <div
