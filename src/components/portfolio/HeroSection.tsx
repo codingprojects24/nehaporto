@@ -186,9 +186,9 @@ export function HeroSection({ profile }: { profile: Profile }) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="inline-flex size-[42px] sm:size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
+                      className="inline-flex size-[46px] sm:size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
                     >
-                      <Icon className="size-[19px] sm:size-5" />
+                      <Icon className="size-[21px] sm:size-5" />
                     </a>
                   ))}
               </div>
