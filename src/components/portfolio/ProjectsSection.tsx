@@ -111,16 +111,46 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           </div>
         )}
 
-        <div className="p-8">
-          <div className="flex flex-wrap items-center gap-2">
-            <Pill tone="accent">{project.category}</Pill>
-            {project.featured ? (
-              <Pill tone="warm">
-                <Star className="size-3" aria-hidden /> Featured
-              </Pill>
-            ) : null}
+        <div className="p-6 sm:p-8">
+          {/* Top Header: Category & Action Links */}
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <Pill tone="accent">{project.category}</Pill>
+              {project.featured ? (
+                <Pill tone="warm">
+                  <Star className="size-3" aria-hidden /> Featured
+                </Pill>
+              ) : null}
+            </div>
+
+            {/* Links at the top */}
+            <div className="flex flex-wrap items-center gap-2.5">
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs sm:text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 active:scale-95"
+                >
+                  <span>Live Demo</span>
+                  <ExternalLink className="size-3.5" aria-hidden />
+                </a>
+              ) : null}
+              {project.githubUrl ? (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border-strong bg-surface px-4 py-2 text-xs sm:text-sm font-semibold text-text-primary transition-all hover:border-primary active:scale-95"
+                >
+                  <Github className="size-3.5" aria-hidden />
+                  <span>GitHub</span>
+                </a>
+              ) : null}
+            </div>
           </div>
-          <h3 className="mt-4 text-2xl font-bold">{project.title}</h3>
+
+          <h3 className="mt-4 text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">{project.title}</h3>
           <p className="mt-3 leading-relaxed text-text-secondary">
             {project.longDescription || project.description}
           </p>
@@ -128,28 +158,6 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             {project.techStack.map((tech) => (
               <Pill key={tech}>{tech}</Pill>
             ))}
-          </div>
-          <div className="mt-7 flex flex-wrap gap-3">
-            {project.liveUrl ? (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
-              >
-                Live Demo <ExternalLink className="size-4" aria-hidden />
-              </a>
-            ) : null}
-            {project.githubUrl ? (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border-strong px-5 py-2.5 text-sm font-semibold"
-              >
-                <Github className="size-4" aria-hidden /> GitHub
-              </a>
-            ) : null}
           </div>
         </div>
       </motion.div>
