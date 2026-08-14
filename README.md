@@ -969,9 +969,9 @@ Certifications (4):
 
 Education (3):
 
-1. B.Tech Data Science — KIET Engineering College — 2023–2027
-2. Intermediate MPC — Sri Chaitanya Junior College — 2021–2023
-3. Secondary Education — Dr. KKR's Gowtham School — 2021
+1. B.Tech Machine Learning — KIET Womens Engineering College — 2024–2028
+2. Intermediate MPC — Sri Chaitanya Girls Junior College — 2021–2023
+3. Secondary Education — VVS High School — 2021
 
 ---
 

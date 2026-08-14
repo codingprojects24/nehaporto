@@ -155,17 +155,17 @@ export const seedCertifications: Certification[] = [
 export const seedEducation: Education[] = [
   {
     id: "btech",
-    degree: "B.Tech — Data Science",
-    institution: "KIET Engineering College",
-    period: "2023 – 2027",
+    degree: "B.Tech — Machine Learning",
+    institution: "KIET Womens Engineering College",
+    period: "2024 – 2028",
     description:
-      "Core coursework in data science, machine learning, statistics and software engineering, alongside continuous project work.",
+      "Focused coursework in machine learning, artificial intelligence, data science, statistics and programming, with hands-on experience through projects and practical applications.",
     order: 1,
   },
   {
     id: "inter",
     degree: "Intermediate — MPC",
-    institution: "Sri Chaitanya Junior College",
+    institution: "Sri Chaitanya Girls Junior College",
     period: "2021 – 2023",
     description: "Mathematics, Physics and Chemistry with a focus on analytical problem solving.",
     order: 2,
@@ -173,7 +173,7 @@ export const seedEducation: Education[] = [
   {
     id: "school",
     degree: "Secondary Education",
-    institution: "Dr. KKR's Gowtham School",
+    institution: "VVS High School",
     period: "2021",
     description: "Completed secondary schooling with distinction in mathematics and science.",
     order: 3,

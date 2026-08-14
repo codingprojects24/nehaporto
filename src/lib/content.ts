@@ -89,6 +89,16 @@ export async function fetchCollection<T extends Ordered>(name: CollectionName): 
         return sortByOrder(seedExperience as unknown as T[]);
       }
     }
+    if (name === "education") {
+      const hasOldEducation = snap.docs.some(
+        (d) =>
+          (d.data() as { institution?: string }).institution === "KIET Engineering College" ||
+          (d.data() as { institution?: string }).institution === "Dr. KKR's Gowtham School",
+      );
+      if (hasOldEducation) {
+        return sortByOrder(seedEducation as unknown as T[]);
+      }
+    }
     return sortByOrder(snap.docs.map((d) => ({ id: d.id, ...d.data() }) as T));
   } catch (error) {
     console.warn(`[content] falling back to seed data for "${name}"`, error);
