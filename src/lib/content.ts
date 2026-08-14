@@ -99,6 +99,14 @@ export async function fetchCollection<T extends Ordered>(name: CollectionName): 
         return sortByOrder(seedEducation as unknown as T[]);
       }
     }
+    if (name === "certifications") {
+      const hasOldCerts = snap.docs.some(
+        (d) => d.id === "cert-ds" || d.id === "cert-tf" || d.id === "cert-be10x",
+      );
+      if (hasOldCerts) {
+        return sortByOrder(seedCertifications as unknown as T[]);
+      }
+    }
     return sortByOrder(snap.docs.map((d) => ({ id: d.id, ...d.data() }) as T));
   } catch (error) {
     console.warn(`[content] falling back to seed data for "${name}"`, error);

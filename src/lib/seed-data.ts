@@ -119,35 +119,43 @@ export const seedExperience: Experience[] = [
 
 export const seedCertifications: Certification[] = [
   {
-    id: "cert-ds",
-    title: "Data Science Master Virtual Internship",
-    issuer: "EduSkills (APSCHE & Altair)",
-    date: "2024",
+    id: "quizoff-2026",
+    title: "QuizOff 2026: India's Biggest AI Quiz",
+    issuer: "CampusCrew · Unstop",
+    date: "2026",
     credentialUrl: "",
+    description:
+      "Participated in QuizOff 2026, India’s Biggest AI Quiz, competing among students from institutions across the globe.",
     order: 1,
   },
   {
-    id: "cert-tf",
-    title: "TensorFlow & Object Detection",
-    issuer: "Google Developer Courses",
-    date: "2024",
+    id: "ai-hackathon-2026",
+    title: "AI Hackathon 2026",
+    issuer: "X Factor",
+    date: "2026",
     credentialUrl: "",
+    description:
+      "Successfully completed and actively participated in a 2-day AI Hackathon, building and deploying an AI-powered project using modern AI-assisted development platforms.",
     order: 2,
   },
   {
-    id: "cert-be10x",
-    title: "AI Tools Workshop",
-    issuer: "be10x",
-    date: "2024",
+    id: "ai-skills-passport",
+    title: "AI Skills Passport",
+    issuer: "EY & Microsoft",
+    date: "2026",
     credentialUrl: "",
+    description:
+      "Completed the AI Skills Passport course, covering AI concepts, technology applications, employability skills, and the impact of AI across business and technology.",
     order: 3,
   },
   {
-    id: "cert-aiml",
-    title: "AI-ML Virtual Internship",
-    issuer: "Google for Developers",
-    date: "2024",
+    id: "ai-for-beginners",
+    title: "AI for Beginners",
+    issuer: "HP LIFE · HP Foundation",
+    date: "2026",
     credentialUrl: "",
+    description:
+      "Completed the AI for Beginners course, gaining a foundational understanding of artificial intelligence, data, business applications, and AI ethics.",
     order: 4,
   },
 ];

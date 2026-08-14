@@ -962,10 +962,10 @@ Experience (2):
 
 Certifications (4):
 
-1. Data Science Master Virtual Internship — EduSkills (APSCHE & Altair)
-2. TensorFlow & Object Detection — Google Developer Courses
-3. AI Tools Workshop — be10x
-4. AI-ML Virtual Internship — Google for Developers
+1. QuizOff 2026: India's Biggest AI Quiz — CampusCrew · Unstop (2026)
+2. AI Hackathon 2026 — X Factor (2026)
+3. AI Skills Passport — EY & Microsoft (2026)
+4. AI for Beginners — HP LIFE · HP Foundation (2026)
 
 Education (3):
 

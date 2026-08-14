@@ -61,6 +61,7 @@ export type Certification = {
   date: string;
   credentialUrl: string;
   badgeImageUrl?: string;
+  description?: string;
   order: number;
 };
 
