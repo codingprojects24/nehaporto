@@ -21,7 +21,7 @@ export function Reveal({
       className={className}
       initial={{ opacity: 0, y, x, filter: "blur(6px)" }}
       whileInView={{ opacity: 1, y: 0, x: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay, ease: [0.4, 0, 0.2, 1] }}
     >
       {children}
@@ -95,8 +95,14 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn("scroll-mt-24 py-24 md:py-28", className)}>
-      <div className="mx-auto max-w-7xl px-6">{children}</div>
+    <section
+      id={id}
+      className={cn(
+        "relative w-full scroll-mt-20 overflow-x-clip py-20 sm:py-24 md:py-28",
+        className,
+      )}
+    >
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8">{children}</div>
     </section>
   );
 }

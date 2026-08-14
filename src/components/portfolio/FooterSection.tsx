@@ -27,8 +27,8 @@ export function FooterSection({ profile }: { profile: Profile }) {
   ];
 
   return (
-    <footer className="border-t border-border bg-bg-secondary">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <footer className="w-full overflow-x-clip border-t border-border bg-bg-secondary">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 py-16">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <span className="font-display text-2xl font-extrabold">

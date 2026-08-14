@@ -52,7 +52,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] overflow-hidden pt-20 pb-16 sm:pt-24 md:pt-28 md:pb-20"
+      className="relative min-h-[85vh] w-full overflow-hidden pt-20 pb-16 sm:pt-24 md:pt-28 md:pb-20"
     >
       {/* Subtle Dot Grid Background */}
       <div
@@ -66,14 +66,14 @@ export function HeroSection({ profile }: { profile: Profile }) {
 
       {/* Atmospheric Soft Ambient Gradient Blobs */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 -left-20 size-[500px] rounded-full bg-blue-600/14 blur-[120px]" />
-        <div className="absolute top-1/4 -right-20 size-[600px] rounded-full bg-rose-500/12 blur-[140px]" />
+        <div className="absolute -top-32 -left-20 size-[400px] sm:size-[500px] rounded-full bg-blue-600/14 blur-[100px] sm:blur-[120px]" />
+        <div className="absolute top-1/4 -right-20 size-[450px] sm:size-[600px] rounded-full bg-rose-500/12 blur-[120px] sm:blur-[140px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
           {/* Left Column: Headlines & Call to Action */}
-          <div>
+          <div className="w-full min-w-0">
             {/* Greeting Badge */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -94,7 +94,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
             >
               <h1
                 style={{ fontFamily: "'Poppins', sans-serif" }}
-                className="text-[50px] sm:text-[58px] md:text-[64px] lg:text-[68px] font-extrabold tracking-tight text-slate-950 leading-[1.08]"
+                className="text-[38px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-extrabold tracking-tight text-slate-950 leading-[1.12] break-words"
               >
                 <span className="text-slate-950">Neha</span>{" "}
                 <span className="text-blue-600">satya</span>
@@ -222,7 +222,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
         </div>
 
         {/* Highlight Stats Row */}
-        <div className="mt-20 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="mt-14 sm:mt-20 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 w-full">
           {(profile.stats &&
           profile.stats.length > 0 &&
           !profile.stats.some(
@@ -245,12 +245,14 @@ export function HeroSection({ profile }: { profile: Profile }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 text-center shadow-sm backdrop-blur-sm"
+              className="rounded-2xl border border-slate-200/80 bg-white/80 p-4 sm:p-6 text-center shadow-sm backdrop-blur-sm"
             >
-              <p className="font-display text-3xl font-extrabold text-blue-600 sm:text-4xl">
+              <p className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-600">
                 {stat.value}
               </p>
-              <p className="mt-1 text-xs text-slate-500">{stat.label}</p>
+              <p className="mt-1 text-[11px] sm:text-xs text-slate-500 leading-tight">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>

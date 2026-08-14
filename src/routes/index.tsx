@@ -50,7 +50,7 @@ function Index() {
   const education = useCollectionData<Education>("education").data ?? seedEducation;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-background">
       <CustomCursor />
       <a
         href="#home"
@@ -59,7 +59,7 @@ function Index() {
         Skip to content
       </a>
       <NavBar resumeUrl={profile.resumeUrl} />
-      <main>
+      <main className="w-full overflow-x-hidden">
         <HeroSection profile={profile} />
         <AboutSection profile={profile} />
         <SkillsSection skills={skills} />

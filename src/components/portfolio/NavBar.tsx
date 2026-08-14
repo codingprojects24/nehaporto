@@ -37,7 +37,7 @@ export function NavBar({ resumeUrl }: { resumeUrl?: string }) {
           : "bg-transparent py-2.5",
       )}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8">
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 sm:px-6 md:px-8">
         {/* Brand */}
         <a
           href="#home"
