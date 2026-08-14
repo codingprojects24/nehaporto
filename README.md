@@ -963,10 +963,10 @@ Experience (2):
 Certifications (6):
 
 1. Google AI Professional Certificate — Google · Coursera (2026)
-2. AI for Beginners — HP LIFE · HP Foundation (2026)
-3. AI Hackathon 2026 — X Factor (2026)
-4. Enterprise Design Thinking Practitioner — IBM SkillsBuild (2026)
-5. AI Skills Passport — EY · Microsoft (2026)
+2. AI Skills Passport — EY · Microsoft (2026)
+3. AI for Beginners — HP LIFE · HP Foundation (2026)
+4. AI Hackathon 2026 — X Factor (2026)
+5. Enterprise Design Thinking Practitioner — IBM SkillsBuild (2026)
 6. QuizOff 2026: India's Biggest AI Quiz — CampusCrew · Unstop (2026)
 
 Education (3):

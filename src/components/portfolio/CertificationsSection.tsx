@@ -26,6 +26,16 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     order: 1,
   },
   {
+    id: "ai-skills-passport",
+    title: "AI Skills Passport",
+    issuer: "EY · Microsoft",
+    date: "2026",
+    credentialUrl: "",
+    badgeImageUrl: "/logos/microsoft.png",
+    description: "Completed training covering AI, employability, technology, and business skills.",
+    order: 2,
+  },
+  {
     id: "ai-for-beginners",
     title: "AI for Beginners",
     issuer: "HP LIFE · HP Foundation",
@@ -33,7 +43,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     credentialUrl: "",
     badgeImageUrl: "/logos/hp.png",
     description: "Covered AI fundamentals, applications, data, and ethics.",
-    order: 2,
+    order: 3,
   },
   {
     id: "ai-hackathon-2026",
@@ -43,7 +53,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     credentialUrl: "",
     badgeImageUrl: "/logos/xfactor.png",
     description: "Built and deployed an AI-powered project in a 2-day hackathon.",
-    order: 3,
+    order: 4,
   },
   {
     id: "enterprise-design-thinking",
@@ -53,16 +63,6 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     credentialUrl: "",
     badgeImageUrl: "/logos/ibm.png",
     description: "Focused on user-centered problem solving and solution design.",
-    order: 4,
-  },
-  {
-    id: "ai-skills-passport",
-    title: "AI Skills Passport",
-    issuer: "EY · Microsoft",
-    date: "2026",
-    credentialUrl: "",
-    badgeImageUrl: "/logos/microsoft.png",
-    description: "Completed training covering AI, employability, technology, and business skills.",
     order: 5,
   },
   {
