@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <rect width="100" height="100" rx="20" fill="#1C4980"/>
+  <!-- Unstop stylish U symbol -->
+  <path d="M28 28 L28 54 C28 66 37 74 50 74 C63 74 72 66 72 54 L72 32" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <!-- Yellow accent dot on right -->
+  <circle cx="72" cy="28" r="6" fill="#FFA500"/>
+</svg>

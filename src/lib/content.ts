@@ -101,11 +101,7 @@ export async function fetchCollection<T extends Ordered>(name: CollectionName): 
     }
     if (name === "certifications") {
       const hasOldCerts = snap.docs.some(
-        (d) =>
-          d.id === "cert-ds" ||
-          d.id === "cert-tf" ||
-          d.id === "cert-be10x" ||
-          d.id === "ai-skills-passport",
+        (d) => d.id === "cert-ds" || d.id === "cert-tf" || d.id === "cert-be10x",
       );
       if (hasOldCerts) {
         return sortByOrder(seedCertifications as unknown as T[]);
