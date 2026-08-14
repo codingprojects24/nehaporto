@@ -49,6 +49,14 @@ export type Message = {
   createdAt?: string;
 };
 
+export type UserRecord = {
+  uid: string;
+  email: string | null;
+  role: string;
+  createdAt: string;
+  lastLoginAt: string;
+};
+
 type Ordered = { id: string; order?: number };
 
 function sortByOrder<T extends Ordered>(rows: T[]) {
@@ -124,6 +132,37 @@ export async function fetchMessages(): Promise<Message[]> {
 export async function deleteMessage(id: string) {
   const db = await getDb();
   await deleteDoc(doc(db, "messages", id));
+}
+
+/** Stores or updates user record in Firestore "users" collection with a unique User ID. */
+export async function syncUserToFirestore(user: { uid: string; email: string | null }) {
+  try {
+    const db = await getDb();
+    const userRef = doc(db, "users", user.uid);
+    const snap = await getDoc(userRef);
+    const now = new Date().toISOString();
+
+    if (!snap.exists()) {
+      await setDoc(userRef, {
+        uid: user.uid,
+        email: user.email,
+        role: "admin",
+        createdAt: now,
+        lastLoginAt: now,
+      });
+    } else {
+      await setDoc(
+        userRef,
+        {
+          email: user.email,
+          lastLoginAt: now,
+        },
+        { merge: true },
+      );
+    }
+  } catch (error) {
+    console.warn("[content] Failed to sync user record to Firestore", error);
+  }
 }
 
 /** Seeds Firestore with starter content for collections that are empty. */

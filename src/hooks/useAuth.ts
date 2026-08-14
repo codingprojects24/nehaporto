@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { User } from "firebase/auth";
 
+import { syncUserToFirestore } from "@/lib/content";
 import { getFirebaseAuth } from "@/lib/firebase";
 
 export function useAuth() {
@@ -17,6 +18,9 @@ export function useAuth() {
       unsub = onAuthStateChanged(auth, (next) => {
         setUser(next);
         setLoading(false);
+        if (next) {
+          void syncUserToFirestore({ uid: next.uid, email: next.email });
+        }
       });
     })().catch(() => setLoading(false));
     return () => {
@@ -31,7 +35,14 @@ export function useAuth() {
 export async function signIn(email: string, password: string) {
   const { signInWithEmailAndPassword } = await import("firebase/auth");
   const auth = await getFirebaseAuth();
-  await signInWithEmailAndPassword(auth, email, password);
+  const credential = await signInWithEmailAndPassword(auth, email, password);
+  if (credential.user) {
+    await syncUserToFirestore({
+      uid: credential.user.uid,
+      email: credential.user.email,
+    });
+  }
+  return credential.user;
 }
 
 export async function signOutAdmin() {
