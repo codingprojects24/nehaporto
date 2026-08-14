@@ -47,13 +47,23 @@ export function ContactSection({ profile }: { profile: Profile }) {
       return;
     }
     setStatus("sending");
+
+    // Preset message for WhatsApp
+    const presetMessage = `Hi Neha,\n\n*Name:* ${values.name}\n*Email:* ${values.email}${values.subject ? `\n*Subject:* ${values.subject}` : ""}\n\n*Message:*\n${values.message}`;
+    const whatsappUrl = `https://wa.me/917337019534?text=${encodeURIComponent(presetMessage)}`;
+
     try {
       await saveMessage(values);
     } catch {
-      // message storage is best-effort; the visitor still gets confirmation
+      // message storage is best-effort; visitor still opens WhatsApp
     }
+
     setStatus("sent");
-    toast.success("Message sent — I'll get back to you soon!");
+    toast.success("Opening WhatsApp to send your message!");
+
+    // Directly open WhatsApp with preset message
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
     setValues({ name: "", email: "", subject: "", message: "" });
   };
 
