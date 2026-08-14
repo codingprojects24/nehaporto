@@ -159,7 +159,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               </div>
 
               {/* Social Buttons - Below on mobile, same row on desktop */}
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 pl-2 sm:pl-0">
                 {[
                   {
                     href:
