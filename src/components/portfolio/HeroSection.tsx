@@ -94,7 +94,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
             >
               <h1
                 style={{ fontFamily: "'Poppins', sans-serif" }}
-                className="text-[42px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-extrabold tracking-tight text-slate-950 leading-[1.1] break-words"
+                className="text-[42px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-bold tracking-tight text-slate-950 leading-[1.12] break-words"
               >
                 <span className="text-slate-950">Neha</span>{" "}
                 <span className="text-blue-600">satya</span>
