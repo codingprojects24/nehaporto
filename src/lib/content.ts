@@ -80,8 +80,22 @@ export async function fetchProfile(): Promise<Profile> {
   try {
     const db = await getDb();
     const snap = await getDoc(doc(db, "profile", "main"));
-    if (!snap.exists()) return seedProfile;
-    return { ...seedProfile, ...(snap.data() as Partial<Profile>) };
+    const data = snap.exists() ? (snap.data() as Partial<Profile>) : {};
+    const merged: Profile = { ...seedProfile, ...data };
+
+    // Ensure updated links take precedence over any stale database values
+    if (!merged.github || merged.github.toLowerCase().includes("satyanarayana")) {
+      merged.github = "https://github.com/vadigenehasatyasridevi-crypto";
+    }
+    if (!merged.linkedin || merged.linkedin.toLowerCase().includes("satyanarayana")) {
+      merged.linkedin = "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/";
+    }
+    if (!merged.name || merged.name.toLowerCase().includes("satyanarayana")) {
+      merged.name = "Neha satya sridevi vadige";
+    }
+    merged.instagram = "";
+
+    return merged;
   } catch (error) {
     console.warn("[content] falling back to seed profile", error);
     return seedProfile;

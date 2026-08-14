@@ -20,9 +20,23 @@ export function ContactSection({ profile }: { profile: Profile }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const socials = [
-    { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
-    { href: profile.github, Icon: Github, label: "GitHub" },
-  ].filter((s) => s.href);
+    {
+      href:
+        profile.linkedin && !profile.linkedin.toLowerCase().includes("satyanarayana")
+          ? profile.linkedin
+          : "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/",
+      Icon: Linkedin,
+      label: "LinkedIn",
+    },
+    {
+      href:
+        profile.github && !profile.github.toLowerCase().includes("satyanarayana")
+          ? profile.github
+          : "https://github.com/vadigenehasatyasridevi-crypto",
+      Icon: Github,
+      label: "GitHub",
+    },
+  ];
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();

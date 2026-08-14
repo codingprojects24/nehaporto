@@ -154,8 +154,22 @@ export function HeroSection({ profile }: { profile: Profile }) {
               {/* Social Buttons */}
               <div className="flex items-center gap-2.5">
                 {[
-                  { href: profile.github, Icon: Github, label: "GitHub" },
-                  { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
+                  {
+                    href:
+                      profile.github && !profile.github.toLowerCase().includes("satyanarayana")
+                        ? profile.github
+                        : "https://github.com/vadigenehasatyasridevi-crypto",
+                    Icon: Github,
+                    label: "GitHub",
+                  },
+                  {
+                    href:
+                      profile.linkedin && !profile.linkedin.toLowerCase().includes("satyanarayana")
+                        ? profile.linkedin
+                        : "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/",
+                    Icon: Linkedin,
+                    label: "LinkedIn",
+                  },
                 ]
                   .filter((s) => s.href)
                   .map(({ href, Icon, label }) => (
