@@ -198,7 +198,7 @@ const DEFAULT_PROJECTS: Project[] = [
     longDescription:
       "An interactive simulation demonstrating multiple robots working together as a team, showcasing swarm intelligence, coordinated movement, and multi-robot behavior with decentralized multi-agent synchronization.",
     techStack: ["Python", "Simulation", "Swarm Intelligence"],
-    liveUrl: "",
+    liveUrl: "https://swarmpy.vercel.app/",
     githubUrl: "https://github.com/vadigenehasatyasridevi-crypto",
     thumbnailUrl: "",
     images: [],
@@ -212,7 +212,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState<Project | null>(null);
 
-  const activeProjects =
+  const rawProjects =
     projects &&
     projects.length > 0 &&
     !projects.some(
@@ -220,6 +220,10 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
     )
       ? projects
       : DEFAULT_PROJECTS;
+
+  const activeProjects = rawProjects.map((p) =>
+    p.id === "swarm-robotics-simulation" ? { ...p, liveUrl: "https://swarmpy.vercel.app/" } : p,
+  );
 
   const filters = ["All", ...Array.from(new Set(activeProjects.map((p) => p.category)))];
   const featured = activeProjects.find((p) => p.featured) ?? activeProjects[0];

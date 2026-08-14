@@ -80,7 +80,7 @@ export const seedProjects: Project[] = [
     longDescription:
       "An interactive simulation demonstrating multiple robots working together as a team, showcasing swarm intelligence, coordinated movement, and multi-robot behavior with decentralized multi-agent synchronization.",
     techStack: ["Python", "Simulation", "Swarm Intelligence"],
-    liveUrl: "",
+    liveUrl: "https://swarmpy.vercel.app/",
     githubUrl: "https://github.com/vadigenehasatyasridevi-crypto",
     thumbnailUrl: "",
     images: [],
