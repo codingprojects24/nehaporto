@@ -145,13 +145,13 @@ export function CertificationsSection({ items }: { items: Certification[] }) {
               className="w-[290px] shrink-0 snap-start sm:w-[320px] md:w-[340px]"
             >
               <article className="lift flex h-full flex-col rounded-2xl border border-border border-l-4 border-l-primary bg-surface p-6 shadow-sm transition-all duration-200 hover:rotate-1 hover:shadow-float">
-                {/* Brand Logo replacing badge icon */}
-                <div className="flex size-11 items-center justify-center rounded-xl border border-slate-100 bg-slate-50/90 p-2 shadow-xs transition-transform duration-200 hover:scale-105">
+                {/* Brand Logo - Transparent & Prominent */}
+                <div className="flex h-12 w-auto items-center">
                   <img
                     src={logoSrc}
                     alt={`${cert.title} logo`}
                     loading="lazy"
-                    className="size-full object-contain"
+                    className="h-12 max-h-12 w-auto max-w-[85px] object-contain object-left transition-transform duration-200 hover:scale-105"
                   />
                 </div>
 
