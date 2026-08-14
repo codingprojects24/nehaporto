@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Instagram, Linkedin } from "lucide-react";
+import { ArrowUp, Github, Linkedin } from "lucide-react";
 
 import { useMotivationalQuote } from "@/hooks/useMotivationalQuote";
 import type { Profile } from "@/lib/types";
@@ -10,7 +10,6 @@ export function FooterSection({ profile }: { profile: Profile }) {
   const socials = [
     { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
     { href: profile.github, Icon: Github, label: "GitHub" },
-    { href: profile.instagram, Icon: Instagram, label: "Instagram" },
   ].filter((s) => s.href);
 
   return (
@@ -19,7 +18,7 @@ export function FooterSection({ profile }: { profile: Profile }) {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <span className="font-display text-2xl font-extrabold">
-              S<span className="text-primary">.</span>C
+              Neha<span className="text-primary">.</span>
             </span>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-text-secondary">
               {profile.tagline} — building web products with Generative AI at the core.

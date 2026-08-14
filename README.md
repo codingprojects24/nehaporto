@@ -945,9 +945,8 @@ Profile:
 - tagline: "Gen AI Full Stack Developer"
 - bio: "I design and develop modern web applications with a focus on full-stack development and Generative AI. I love learning new technologies and applying them through hands-on projects."
 - phone: "+91 9121055512"
-- linkedin: "https://www.linkedin.com/in/satyanarayanach2417"
-- instagram: "https://www.instagram.com/dreamyai_world__/"
-- github: "https://github.com/Satyanarayana2417"
+- linkedin: "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/"
+- github: "https://github.com/vadigenehasatyasridevi-crypto"
 
 Projects (5 pre-loaded):
 

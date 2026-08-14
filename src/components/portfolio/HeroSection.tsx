@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Instagram, Linkedin, Sparkles } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -156,7 +156,6 @@ export function HeroSection({ profile }: { profile: Profile }) {
                 {[
                   { href: profile.github, Icon: Github, label: "GitHub" },
                   { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
-                  { href: profile.instagram, Icon: Instagram, label: "Instagram" },
                 ]
                   .filter((s) => s.href)
                   .map(({ href, Icon, label }) => (

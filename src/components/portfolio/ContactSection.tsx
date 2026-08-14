@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail, Phone, Send, Check } from "lucide-react";
+import { Check, Github, Linkedin, Mail, Phone, Send } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -22,7 +22,6 @@ export function ContactSection({ profile }: { profile: Profile }) {
   const socials = [
     { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
     { href: profile.github, Icon: Github, label: "GitHub" },
-    { href: profile.instagram, Icon: Instagram, label: "Instagram" },
   ].filter((s) => s.href);
 
   const submit = async (event: React.FormEvent) => {

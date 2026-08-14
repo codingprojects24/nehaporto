@@ -24,9 +24,9 @@ export const seedProfile: Profile = {
   ],
   email: "satyanarayanach2417@gmail.com",
   phone: "+91 9121055512",
-  linkedin: "https://www.linkedin.com/in/satyanarayanach2417",
-  github: "https://github.com/Satyanarayana2417",
-  instagram: "https://www.instagram.com/dreamyai_world__/",
+  linkedin: "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/",
+  github: "https://github.com/vadigenehasatyasridevi-crypto",
+  instagram: "",
   footerQuotePrefix: "Every day is a chance to grow.",
 };
 

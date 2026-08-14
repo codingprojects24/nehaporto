@@ -12,7 +12,7 @@ export type Profile = {
   phone: string;
   linkedin: string;
   github: string;
-  instagram: string;
+  instagram?: string;
   footerQuotePrefix: string;
 };
 
