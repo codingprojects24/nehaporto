@@ -79,7 +79,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="inline-flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/90 px-3.5 py-1.5 text-xs font-medium text-slate-600 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/90 px-4 py-1.5 text-sm font-medium text-slate-700 shadow-sm backdrop-blur-sm"
             >
               <span aria-hidden="true">👋</span>
               <span>Hey there, I&apos;m</span>
@@ -90,11 +90,11 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
-              className="mt-3.5"
+              className="mt-4"
             >
               <h1
                 style={{ fontFamily: "'Poppins', sans-serif" }}
-                className="text-[48px] font-extrabold tracking-tight text-slate-950 leading-[1.12]"
+                className="text-[54px] sm:text-[62px] md:text-[68px] lg:text-[72px] font-extrabold tracking-tight text-slate-950 leading-[1.05]"
               >
                 <span className="text-slate-950">Satya</span>
                 <span className="text-blue-600">narayana</span>
@@ -109,9 +109,9 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="mt-5 flex items-center gap-2 font-mono text-sm sm:text-base text-slate-600"
+              className="mt-6 flex items-center gap-2.5 font-mono text-base sm:text-lg text-slate-700"
             >
-              <Sparkles className="size-4 text-orange-400" />
+              <Sparkles className="size-5 text-orange-400" />
               <span>I&apos;m a</span>
               <Typewriter />
             </motion.div>
@@ -121,7 +121,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-slate-600"
+              className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-slate-600"
             >
               {profile.heroSubtext ||
                 "I craft fast, intelligent and beautifully engineered products — blending modern web stacks with Generative AI to ship experiences that feel inevitable."}
@@ -132,12 +132,12 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.5 }}
-              className="mt-7 flex flex-wrap items-center gap-3"
+              className="mt-8 flex flex-wrap items-center gap-3.5"
             >
               {/* Primary CTA */}
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-blue-500/25 transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3.5 text-sm sm:text-base font-semibold text-white shadow-md shadow-blue-500/25 transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 active:scale-95"
               >
                 <span>View My Work</span>
                 <ArrowDown className="size-4" />
@@ -146,13 +146,13 @@ export function HeroSection({ profile }: { profile: Profile }) {
               {/* Secondary CTA */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-300/90 bg-white/90 px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-slate-400 hover:bg-white active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300/90 bg-white/90 px-7 py-3.5 text-sm sm:text-base font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-slate-400 hover:bg-white active:scale-95"
               >
                 Get In Touch
               </a>
 
               {/* Social Buttons */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 {[
                   { href: profile.github, Icon: Github, label: "GitHub" },
                   { href: profile.linkedin, Icon: Linkedin, label: "LinkedIn" },
@@ -166,9 +166,9 @@ export function HeroSection({ profile }: { profile: Profile }) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="inline-flex size-11 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
+                      className="inline-flex size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
                     >
-                      <Icon className="size-4" />
+                      <Icon className="size-5" />
                     </a>
                   ))}
               </div>
