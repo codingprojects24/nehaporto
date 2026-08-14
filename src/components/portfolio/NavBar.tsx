@@ -94,43 +94,94 @@ export function NavBar({ resumeUrl }: { resumeUrl?: string }) {
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Backdrop & Floating Card Drawer */}
       <AnimatePresence>
         {open ? (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="border-b border-slate-200 bg-white/95 px-6 py-4 shadow-lg backdrop-blur-md md:hidden"
-          >
-            <ul className="flex flex-col space-y-2">
-              {LINKS.map((link) => (
-                <li key={link.id}>
-                  <a
-                    href={`#${link.id}`}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-              {resumeUrl ? (
-                <li className="pt-2">
-                  <a
-                    href={resumeUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-1.5 rounded-full bg-slate-950 px-4 py-2.5 text-center text-xs font-semibold text-white"
-                  >
-                    <span>View Resume</span>
-                    <ArrowUpRight className="size-3.5" />
-                  </a>
-                </li>
-              ) : null}
-            </ul>
-          </motion.div>
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 z-40 bg-slate-900/30 backdrop-blur-xs md:hidden"
+            />
+
+            {/* Floating Menu Card matching reference image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96, y: -12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: -12 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="relative z-50 mx-4 mt-3 max-w-sm rounded-[32px] border border-slate-100/90 bg-white p-7 shadow-[0_25px_60px_rgba(15,23,42,0.14)] md:hidden"
+            >
+              {/* Stepper Navigation List */}
+              <div className="relative">
+                {/* Vertical continuous line */}
+                <div
+                  aria-hidden="true"
+                  className="absolute left-[11px] top-3 bottom-3 w-[2px] bg-blue-100/80"
+                />
+
+                <ul className="relative z-10 flex flex-col space-y-4">
+                  {LINKS.map((link) => {
+                    const isActive = active === link.id;
+
+                    return (
+                      <li key={link.id}>
+                        <a
+                          href={`#${link.id}`}
+                          onClick={() => setOpen(false)}
+                          className="group flex items-center gap-4 py-1 transition-colors"
+                        >
+                          {/* Stepper Node Ring */}
+                          <span
+                            className={cn(
+                              "flex size-[24px] shrink-0 items-center justify-center rounded-full border-2 bg-white transition-all duration-200",
+                              isActive
+                                ? "border-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.35)]"
+                                : "border-blue-200/90 group-hover:border-blue-500",
+                            )}
+                          >
+                            {isActive ? (
+                              <span className="size-2 rounded-full bg-blue-600" />
+                            ) : null}
+                          </span>
+
+                          {/* Stepper Label */}
+                          <span
+                            className={cn(
+                              "text-base font-medium transition-colors",
+                              isActive
+                                ? "font-semibold text-blue-600"
+                                : "text-slate-800 group-hover:text-blue-600",
+                            )}
+                          >
+                            {link.label}
+                          </span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              {/* Bottom Full-Width Action Button: View Resume ↗ */}
+              <div className="mt-7 pt-2">
+                <a
+                  href={resumeUrl || "#contact"}
+                  target={resumeUrl ? "_blank" : undefined}
+                  rel="noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="flex w-full items-center justify-between rounded-full bg-[#0b0f19] px-6 py-4 text-white shadow-md transition-all duration-150 hover:bg-slate-800 active:scale-[0.98]"
+                >
+                  <span className="text-base font-semibold tracking-tight">View Resume</span>
+                  <ArrowUpRight className="size-5" />
+                </a>
+              </div>
+            </motion.div>
+          </>
         ) : null}
       </AnimatePresence>
     </header>
