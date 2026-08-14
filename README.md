@@ -955,9 +955,10 @@ Projects (3 pre-loaded):
 2. AI-Powered User Support System — AI Web (Python, Chat Interface, Machine Learning)
 3. Swarm Robotics Simulation — Robotics Simulation (Python, Simulation, Swarm Intelligence)
 
-Experience:
+Experience (2):
 
-- Dream Team Services Inc. | Gen AI Full Stack Developer Intern | Feb 2025 – Present | current: true
+1. AI Hackathon by X Factor — AI Hackathon Participant (Hackathon · 2 Days)
+2. NextGen — Full Stack Development Intern (Virtual Internship · Jun 2026 – Aug 2026)
 
 Certifications (4):
 

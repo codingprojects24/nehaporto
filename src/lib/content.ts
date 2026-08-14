@@ -83,6 +83,12 @@ export async function fetchCollection<T extends Ordered>(name: CollectionName): 
         return sortByOrder(seedProjects as unknown as T[]);
       }
     }
+    if (name === "experience") {
+      const hasOldExperience = snap.docs.some((d) => d.id === "dream-team");
+      if (hasOldExperience) {
+        return sortByOrder(seedExperience as unknown as T[]);
+      }
+    }
     return sortByOrder(snap.docs.map((d) => ({ id: d.id, ...d.data() }) as T));
   } catch (error) {
     console.warn(`[content] falling back to seed data for "${name}"`, error);

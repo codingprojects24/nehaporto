@@ -92,16 +92,28 @@ export const seedProjects: Project[] = [
 
 export const seedExperience: Experience[] = [
   {
-    id: "dream-team",
-    company: "Dream Team Services Inc.",
-    role: "Gen AI Full Stack Developer Intern",
-    type: "Internship",
-    startDate: "Feb 2025",
-    endDate: "Present",
-    current: true,
+    id: "ai-hackathon-x-factor",
+    company: "X Factor",
+    role: "AI Hackathon Participant",
+    type: "Hackathon",
+    startDate: "2 Days",
+    endDate: "",
+    current: false,
     description:
-      "Building and shipping full-stack web products with Generative AI features — designing React frontends, wiring Firebase backends, and integrating LLM APIs into real client workflows.",
+      "Participated in a 2-day AI hackathon, collaborating on an AI-focused project and developing practical solutions within a fast-paced team environment.",
     order: 1,
+  },
+  {
+    id: "nextgen-internship",
+    company: "NextGen",
+    role: "Full Stack Development Intern",
+    type: "Virtual Internship",
+    startDate: "Jun 2026",
+    endDate: "Aug 2026",
+    current: false,
+    description:
+      "Completed a 3-month virtual internship focused on full-stack development, gaining hands-on experience in building web applications and working with frontend and backend technologies.",
+    order: 2,
   },
 ];
 
