@@ -222,22 +222,22 @@ export function HeroSection({ profile }: { profile: Profile }) {
         </div>
 
         {/* Highlight Stats Row */}
-        <div className="mt-14 sm:mt-20 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 w-full">
+        <div className="mt-20 grid grid-cols-2 gap-4 md:grid-cols-4">
           {(profile.stats &&
-          profile.stats.length > 0 &&
-          !profile.stats.some(
-            (s) =>
-              s.value === "1+" ||
-              s.value === "5+" ||
-              s.label?.toLowerCase().includes("year of experience"),
-          )
+            profile.stats.length > 0 &&
+            !profile.stats.some(
+              (s) =>
+                s.value === "1+" ||
+                s.value === "5+" ||
+                s.label?.toLowerCase().includes("year of experience"),
+            )
             ? profile.stats
             : [
-                { value: "6+", label: "Months of Experience" },
-                { value: "2+", label: "Projects Built" },
-                { value: "∞", label: "Always Improving" },
-                { value: "100%", label: "Dedication" },
-              ]
+              { value: "6+", label: "Months of Experience" },
+              { value: "2+", label: "Projects Built" },
+              { value: "∞", label: "Always Improving" },
+              { value: "100%", label: "Dedication" },
+            ]
           ).map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -245,14 +245,12 @@ export function HeroSection({ profile }: { profile: Profile }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="rounded-2xl border border-slate-200/80 bg-white/80 p-4 sm:p-6 text-center shadow-sm backdrop-blur-sm"
+              className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 text-center shadow-sm backdrop-blur-sm"
             >
-              <p className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-600">
+              <p className="font-display text-3xl font-extrabold text-blue-600 sm:text-4xl">
                 {stat.value}
               </p>
-              <p className="mt-1 text-[11px] sm:text-xs text-slate-500 leading-tight">
-                {stat.label}
-              </p>
+              <p className="mt-1 text-xs text-slate-500">{stat.label}</p>
             </motion.div>
           ))}
         </div>
