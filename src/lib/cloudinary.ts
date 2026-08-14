@@ -1,5 +1,5 @@
 const CLOUD_NAME = "dzlssgfz9";
-const UPLOAD_PRESET = "My porto";
+const UPLOAD_PRESET = "nehaporto";
 const BASE_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}`;
 
 export const MAX_IMAGE_BYTES = 10 * 1024 * 1024;

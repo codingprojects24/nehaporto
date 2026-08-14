@@ -50,20 +50,20 @@ SECTION 1 — TECH STACK (ATOMIC SPECIFICATION)
   - Firebase Analytics — enabled
 - Cloudinary — media storage only
   - Cloud name: `dzlssgfz9`
-  - Upload preset: `My porto` (unsigned upload preset)
+  - Upload preset: `nehaporto` (unsigned upload preset)
   - Usage: Upload image/video → receive secure URL → store URL in Firestore
 
 1.4 Firebase Configuration (use exactly as given)
 
 ```js
 const firebaseConfig = {
-  apiKey: "@secret:GOOGLE_API_KEY ",
-  authDomain: "my-portofolio-7b696.firebaseapp.com",
-  projectId: "my-portofolio-7b696",
-  storageBucket: "my-portofolio-7b696.firebasestorage.app",
-  messagingSenderId: "634879803218",
-  appId: "1:634879803218:web:31999921abae1a7b5cc48b",
-  measurementId: "G-HWPXELSHSS",
+  apiKey: "AIzaSyCFVITRyrMCHlan42ElD5kiZNK858S3Vu4",
+  authDomain: "nehaporto.firebaseapp.com",
+  projectId: "nehaporto",
+  storageBucket: "nehaporto.firebasestorage.app",
+  messagingSenderId: "356039771111",
+  appId: "1:356039771111:web:7b307c9705f860f6ccb342",
+  measurementId: "G-SSB2Z5VP5X",
 };
 ```
 
@@ -323,7 +323,7 @@ Upload Function (reusable utility)
 ```js
 // utils/cloudinary.js
 const CLOUD_NAME = "dzlssgfz9";
-const UPLOAD_PRESET = "My porto";
+const UPLOAD_PRESET = "nehaporto";
 const BASE_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}`;
 
 export async function uploadToCloudinary(file, resourceType = "auto") {
