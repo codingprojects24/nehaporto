@@ -192,8 +192,8 @@ Document ID: `main`
   "profileImageUrl": "string (cloudinary url)",
   "resumeUrl": "string (cloudinary url)",
   "stats": [
-    { "value": "1+", "label": "Year of Experience" },
-    { "value": "5+", "label": "Projects Built" },
+    { "value": "6+", "label": "Months of Experience" },
+    { "value": "2+", "label": "Projects Built" },
     { "value": "∞", "label": "Always Improving" },
     { "value": "100%", "label": "Dedication" }
   ],
