@@ -9,7 +9,7 @@ import type {
 } from "./types";
 
 export const seedProfile: Profile = {
-  name: "Satyanarayana Chodisetti",
+  name: "Neha satya sridevi vadige",
   tagline: "Gen AI Full Stack Developer",
   bio: "I design and develop modern web applications with a focus on full-stack development and Generative AI. I love learning new technologies and applying them through hands-on projects.",
   heroSubtext:

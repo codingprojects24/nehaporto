@@ -62,7 +62,7 @@ export function FooterSection({ profile }: { profile: Profile }) {
 
         <div className="flex flex-col items-center gap-6 text-sm text-muted-foreground md:flex-row md:justify-between">
           <p>
-            © {new Date().getFullYear()} Chsatyanarayana. {profile.footerQuotePrefix}
+            © {new Date().getFullYear()} Neha satya sridevi vadige. {profile.footerQuotePrefix}
           </p>
           <p className="max-w-md text-center italic">
             {quote ? (

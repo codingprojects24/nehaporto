@@ -74,18 +74,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Satyanarayana Chodisetti — Portfolio" },
+      { title: "Neha satya sridevi vadige — Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Satyanarayana Chodisetti: Gen AI full stack developer building React web platforms, AI integrations and ML-powered products.",
+          "Portfolio of Neha satya sridevi vadige: Gen AI full stack developer building React web platforms, AI integrations and ML-powered products.",
       },
-      { name: "author", content: "Satyanarayana Chodisetti" },
-      { property: "og:title", content: "Satyanarayana Chodisetti — Portfolio" },
+      { name: "author", content: "Neha satya sridevi vadige" },
+      { property: "og:title", content: "Neha satya sridevi vadige — Portfolio" },
       {
         property: "og:description",
         content:
-          "Portfolio of Satyanarayana Chodisetti: Gen AI full stack developer building React web platforms, AI integrations and ML-powered products.",
+          "Portfolio of Neha satya sridevi vadige: Gen AI full stack developer building React web platforms, AI integrations and ML-powered products.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

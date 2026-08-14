@@ -1,3 +1,3 @@
 # Workspace Agent Instructions
 
-Project instructions for Satya's Digital Canvas portfolio application.
+Project instructions for Neha satya sridevi vadige's portfolio application.

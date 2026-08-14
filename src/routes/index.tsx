@@ -22,9 +22,9 @@ import {
 } from "@/lib/seed-data";
 import type { Certification, Education, Experience, Project, SkillGroup } from "@/lib/types";
 
-const TITLE = "Satyanarayana Chodisetti — Gen AI Full Stack Developer";
+const TITLE = "Neha satya sridevi vadige — Gen AI Full Stack Developer";
 const DESCRIPTION =
-  "Portfolio of Satyanarayana Chodisetti: Gen AI full stack developer building React web platforms, AI integrations and ML-powered products.";
+  "Portfolio of Neha satya sridevi vadige: Gen AI full stack developer building React web platforms, AI integrations and ML-powered products.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

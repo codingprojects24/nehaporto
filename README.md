@@ -1,7 +1,7 @@
-# Satya's Digital Canvas
+# Neha's Digital Canvas
 
 🧠 ATOMIC-LEVEL PORTFOLIO WEBSITE PROMPT
-For: Satyanarayana Chodisetti | Gen AI Full Stack Developer
+For: Neha satya sridevi vadige | Gen AI Full Stack Developer
 
 ---
 
@@ -9,7 +9,7 @@ For: Satyanarayana Chodisetti | Gen AI Full Stack Developer
 SECTION 0 — ROLE & MINDSET
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-You are a senior full-stack engineer, UI/UX designer, and creative director with 20+ years of experience delivering world-class digital products for Fortune 500 companies. Your mandate is to build a portfolio website for Satyanarayana Chodisetti that is:
+You are a senior full-stack engineer, UI/UX designer, and creative director with 20+ years of experience delivering world-class digital products for Fortune 500 companies. Your mandate is to build a portfolio website for Neha satya sridevi vadige that is:
 
 - Visually breathtaking with a premium light-theme design language
 - Fully dynamic — all content managed from a private `/admin` panel
@@ -421,7 +421,7 @@ Background:
 Left Column (60% width on desktop):
 
 1. Greeting chip: `<span>` with emoji 👋 + "Hey there, I'm" — slide in from left (Framer Motion, 300ms delay)
-2. Name: `Satyanarayana Chodisetti` in `--font-display` at `--text-hero` size, `--color-text-primary` — animate: fade up + blur-in (GSAP, stagger per word)
+2. Name: `Neha satya sridevi vadige` in `--font-display` at `--text-hero` size, `--color-text-primary` — animate: fade up + blur-in (GSAP, stagger per word)
 3. Typewriter subtitle: Cycles through: "Gen AI Full Stack Developer", "Web Application Builder", "AI Integration Specialist" — using react-typed, `--color-accent-primary` color
 4. Bio paragraph: Reads from Firestore `profile.heroSubtext` — animate: fade up, 600ms delay
 5. CTA Row: Two buttons side by side
@@ -627,7 +627,7 @@ Structure:
 - Columns: Logo+bio | Quick Links | Connect
 - Divider line with gradient
 - Bottom bar:
-  - Left: `© 2025 Chsatyanarayana. Every day is a chance to grow.`
+  - Left: `© 2026 Neha satya sridevi vadige. Every day is a chance to grow.`
   - Center: Dynamic quote (fetched from Quotable API on load)
     - Format: `"quote text" — Author Name`
     - Loading state: skeleton shimmer
@@ -941,7 +941,7 @@ Pre-populate Firestore on first run (check if docs exist, if not seed):
 
 Profile:
 
-- name: "Satyanarayana Chodisetti"
+- name: "Neha satya sridevi vadige"
 - tagline: "Gen AI Full Stack Developer"
 - bio: "I design and develop modern web applications with a focus on full-stack development and Generative AI. I love learning new technologies and applying them through hands-on projects."
 - phone: "+91 9121055512"
@@ -1037,7 +1037,7 @@ Before delivery, verify:
 
 ---
 
-End of Atomic-Level Portfolio Prompt — Satyanarayana Chodisetti
+End of Atomic-Level Portfolio Prompt — Neha satya sridevi vadige
 
 ## Development
 
