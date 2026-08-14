@@ -119,34 +119,13 @@ export const seedExperience: Experience[] = [
 
 export const seedCertifications: Certification[] = [
   {
-    id: "quizoff-2026",
-    title: "QuizOff 2026: India's Biggest AI Quiz",
-    issuer: "CampusCrew · Unstop",
+    id: "google-ai-pro",
+    title: "Google AI Professional Certificate",
+    issuer: "Google · Coursera",
     date: "2026",
     credentialUrl: "",
-    description:
-      "Participated in QuizOff 2026, India’s Biggest AI Quiz, competing among students from institutions across the globe.",
+    description: "7-course certificate covering AI, prompting, data analysis, and app building.",
     order: 1,
-  },
-  {
-    id: "ai-hackathon-2026",
-    title: "AI Hackathon 2026",
-    issuer: "X Factor",
-    date: "2026",
-    credentialUrl: "",
-    description:
-      "Successfully completed and actively participated in a 2-day AI Hackathon, building and deploying an AI-powered project using modern AI-assisted development platforms.",
-    order: 2,
-  },
-  {
-    id: "ai-skills-passport",
-    title: "AI Skills Passport",
-    issuer: "EY & Microsoft",
-    date: "2026",
-    credentialUrl: "",
-    description:
-      "Completed the AI Skills Passport course, covering AI concepts, technology applications, employability skills, and the impact of AI across business and technology.",
-    order: 3,
   },
   {
     id: "ai-for-beginners",
@@ -154,9 +133,35 @@ export const seedCertifications: Certification[] = [
     issuer: "HP LIFE · HP Foundation",
     date: "2026",
     credentialUrl: "",
-    description:
-      "Completed the AI for Beginners course, gaining a foundational understanding of artificial intelligence, data, business applications, and AI ethics.",
+    description: "Covered AI fundamentals, applications, data, and ethics.",
+    order: 2,
+  },
+  {
+    id: "ai-hackathon-2026",
+    title: "AI Hackathon 2026",
+    issuer: "X Factor",
+    date: "2026",
+    credentialUrl: "",
+    description: "Built and deployed an AI-powered project in a 2-day hackathon.",
+    order: 3,
+  },
+  {
+    id: "quizoff-2026",
+    title: "QuizOff 2026: India's Biggest AI Quiz",
+    issuer: "CampusCrew · Unstop",
+    date: "2026",
+    credentialUrl: "",
+    description: "Participated in India’s Biggest AI Quiz.",
     order: 4,
+  },
+  {
+    id: "enterprise-design-thinking",
+    title: "Enterprise Design Thinking Practitioner",
+    issuer: "IBM SkillsBuild",
+    date: "2026",
+    credentialUrl: "",
+    description: "Focused on user-centered problem solving and solution design.",
+    order: 5,
   },
 ];
 

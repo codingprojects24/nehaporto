@@ -960,12 +960,13 @@ Experience (2):
 1. AI Hackathon by X Factor — AI Hackathon Participant (Hackathon · 2 Days)
 2. NextGen — Full Stack Development Intern (Virtual Internship · Jun 2026 – Aug 2026)
 
-Certifications (4):
+Certifications (5):
 
-1. QuizOff 2026: India's Biggest AI Quiz — CampusCrew · Unstop (2026)
-2. AI Hackathon 2026 — X Factor (2026)
-3. AI Skills Passport — EY & Microsoft (2026)
-4. AI for Beginners — HP LIFE · HP Foundation (2026)
+1. Google AI Professional Certificate — Google · Coursera (2026)
+2. AI for Beginners — HP LIFE · HP Foundation (2026)
+3. AI Hackathon 2026 — X Factor (2026)
+4. QuizOff 2026: India's Biggest AI Quiz — CampusCrew · Unstop (2026)
+5. Enterprise Design Thinking Practitioner — IBM SkillsBuild (2026)
 
 Education (3):
 
