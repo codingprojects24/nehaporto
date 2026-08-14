@@ -42,9 +42,9 @@ export function NavBar({ resumeUrl }: { resumeUrl?: string }) {
         <a
           href="#home"
           style={{ fontFamily: "'Poppins', sans-serif" }}
-          className="text-2xl font-black tracking-tight text-slate-900 transition-opacity hover:opacity-80"
+          className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 transition-opacity hover:opacity-80"
         >
-          Neha<span className="text-blue-600">.</span>
+          Neha<span className="text-blue-600 font-bold">.</span>
         </a>
 
         {/* Navigation Links */}
