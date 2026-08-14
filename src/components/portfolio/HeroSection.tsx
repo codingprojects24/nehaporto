@@ -94,7 +94,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
             >
               <h1
                 style={{ fontFamily: "'Syne', sans-serif" }}
-                className="text-5xl font-black tracking-tight text-slate-950 sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.03]"
+                className="text-[48px] font-extrabold tracking-tight text-slate-950 leading-[1.12]"
               >
                 <span className="text-slate-950">Satya</span>
                 <span className="text-blue-600">narayana</span>
