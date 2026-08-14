@@ -113,8 +113,8 @@
   --shadow-glow: 0 0 40px oklch(0.585 0.196 269 / 22%);
   --gradient-accent: linear-gradient(135deg, oklch(0.585 0.196 269), oklch(0.715 0.135 268));
   --gradient-hero:
-    radial-gradient(ellipse at 20% 45%, oklch(0.585 0.196 269 / 10%) 0%, transparent 55%),
-    radial-gradient(ellipse at 82% 18%, oklch(0.72 0.175 40 / 8%) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 45%, oklch(0.52 0.196 269 / 13%) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 18%, oklch(0.65 0.175 40 / 11%) 0%, transparent 50%);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --chart-1: oklch(0.646 0.222 41.116);

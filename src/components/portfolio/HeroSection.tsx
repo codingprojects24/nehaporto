@@ -64,10 +64,10 @@ export function HeroSection({ profile }: { profile: Profile }) {
         }}
       />
 
-      {/* Atmospheric Soft Gradient Blooms */}
+      {/* Atmospheric Soft Ambient Gradient Blobs */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 -left-20 size-[500px] rounded-full bg-blue-400/10 blur-[120px]" />
-        <div className="absolute top-1/4 -right-20 size-[600px] rounded-full bg-indigo-400/10 blur-[140px]" />
+        <div className="absolute -top-32 -left-20 size-[500px] rounded-full bg-blue-600/14 blur-[120px]" />
+        <div className="absolute top-1/4 -right-20 size-[600px] rounded-full bg-rose-500/12 blur-[140px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
