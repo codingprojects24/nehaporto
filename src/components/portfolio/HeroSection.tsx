@@ -252,12 +252,20 @@ export function HeroSection({ profile }: { profile: Profile }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 text-center shadow-sm backdrop-blur-sm"
+              className="rounded-2xl md:rounded-[28px] border border-slate-200/80 bg-white/80 p-6 text-center shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-blue-200 hover:shadow-md"
             >
-              <p className="font-display text-3xl font-extrabold text-blue-600 sm:text-4xl">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-xs text-slate-500">{stat.label}</p>
+              <div className="flex h-10 sm:h-12 items-center justify-center">
+                {stat.value === "∞" ? (
+                  <span className="font-display text-4xl sm:text-5xl font-bold text-blue-600 leading-none select-none">
+                    ∞
+                  </span>
+                ) : (
+                  <p className="font-display text-3xl font-extrabold text-blue-600 sm:text-4xl">
+                    {stat.value}
+                  </p>
+                )}
+              </div>
+              <p className="mt-1.5 text-xs sm:text-sm text-slate-500 font-medium">{stat.label}</p>
             </motion.div>
           ))}
         </div>
