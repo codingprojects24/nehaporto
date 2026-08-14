@@ -57,6 +57,13 @@ export function ContactSection({ profile }: { profile: Profile }) {
     setValues({ name: "", email: "", subject: "", message: "" });
   };
 
+  const displayPhone =
+    profile.phone && !profile.phone.includes("9121055512") ? profile.phone : "+91 73370 19534";
+  const displayEmail =
+    profile.email && !profile.email.includes("satyanarayana")
+      ? profile.email
+      : "vadigenehasatyasridevi@gmail.com";
+
   return (
     <Section id="contact">
       <SectionHeading
@@ -77,7 +84,7 @@ export function ContactSection({ profile }: { profile: Profile }) {
             </div>
 
             <a
-              href={`tel:${profile.phone.replace(/\s/g, "")}`}
+              href={`tel:${displayPhone.replace(/\s/g, "")}`}
               className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary"
             >
               <Phone className="size-5 text-primary" aria-hidden />
@@ -85,13 +92,13 @@ export function ContactSection({ profile }: { profile: Profile }) {
                 <span className="block text-xs uppercase tracking-wide text-muted-foreground">
                   Phone
                 </span>
-                <span className="font-medium">{profile.phone}</span>
+                <span className="font-medium">{displayPhone}</span>
               </span>
             </a>
 
-            {profile.email ? (
+            {displayEmail ? (
               <a
-                href={`mailto:${profile.email}`}
+                href={`mailto:${displayEmail}`}
                 className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary"
               >
                 <Mail className="size-5 text-primary" aria-hidden />
@@ -99,12 +106,12 @@ export function ContactSection({ profile }: { profile: Profile }) {
                   <span className="block text-xs uppercase tracking-wide text-muted-foreground">
                     Email
                   </span>
-                  <span className="font-medium">{profile.email}</span>
+                  <span className="font-medium">{displayEmail}</span>
                 </span>
               </a>
             ) : null}
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 gap-3">
               {socials.map(({ href, Icon, label }) => (
                 <a
                   key={label}

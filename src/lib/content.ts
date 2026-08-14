@@ -69,6 +69,12 @@ export async function fetchCollection<T extends Ordered>(name: CollectionName): 
     const db = await getDb();
     const snap = await getDocs(collection(db, name));
     if (snap.empty) return sortByOrder(collectionSeeds[name] as unknown as T[]);
+    if (name === "skills") {
+      const hasOldSeeds = snap.docs.some((d) => d.id === "genai" || d.id === "frontend");
+      if (hasOldSeeds) {
+        return sortByOrder(seedSkills as unknown as T[]);
+      }
+    }
     return sortByOrder(snap.docs.map((d) => ({ id: d.id, ...d.data() }) as T));
   } catch (error) {
     console.warn(`[content] falling back to seed data for "${name}"`, error);
@@ -92,6 +98,12 @@ export async function fetchProfile(): Promise<Profile> {
     }
     if (!merged.name || merged.name.toLowerCase().includes("satyanarayana")) {
       merged.name = "Neha satya sridevi vadige";
+    }
+    if (!merged.email || merged.email.toLowerCase().includes("satyanarayana")) {
+      merged.email = "vadigenehasatyasridevi@gmail.com";
+    }
+    if (!merged.phone || merged.phone.includes("9121055512")) {
+      merged.phone = "+91 73370 19534";
     }
     merged.instagram = "";
 

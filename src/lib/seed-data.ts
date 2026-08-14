@@ -22,8 +22,8 @@ export const seedProfile: Profile = {
     { value: "∞", label: "Always Improving" },
     { value: "100%", label: "Dedication" },
   ],
-  email: "satyanarayanach2417@gmail.com",
-  phone: "+91 9121055512",
+  email: "vadigenehasatyasridevi@gmail.com",
+  phone: "+91 73370 19534",
   linkedin: "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/",
   github: "https://github.com/vadigenehasatyasridevi-crypto",
   instagram: "",
@@ -32,34 +32,10 @@ export const seedProfile: Profile = {
 
 export const seedSkills: SkillGroup[] = [
   {
-    id: "frontend",
-    category: "Web Development",
-    items: ["React", "Vite", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML5", "CSS3"],
+    id: "skills",
+    category: "Skills",
+    items: ["Python", "HTML", "CSS", "JavaScript", "React"],
     order: 1,
-  },
-  {
-    id: "genai",
-    category: "Generative AI & Tools",
-    items: [
-      "LLM Integration",
-      "Prompt Engineering",
-      "OpenAI API",
-      "Gemini API",
-      "LangChain basics",
-    ],
-    order: 2,
-  },
-  {
-    id: "backend",
-    category: "Python & Backend",
-    items: ["Python", "Flask", "Node.js", "REST APIs", "Firestore", "Firebase Auth"],
-    order: 3,
-  },
-  {
-    id: "ml",
-    category: "ML & Data",
-    items: ["TensorFlow", "scikit-learn", "Pandas", "NumPy", "Object Detection"],
-    order: 4,
   },
 ];
 

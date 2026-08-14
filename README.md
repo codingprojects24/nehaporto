@@ -197,8 +197,8 @@ Document ID: `main`
     { "value": "∞", "label": "Always Improving" },
     { "value": "100%", "label": "Dedication" }
   ],
-  "email": "string",
-  "phone": "+91 9121055512",
+  "email": "vadigenehasatyasridevi@gmail.com",
+  "phone": "+91 73370 19534",
   "linkedin": "string",
   "github": "string",
   "instagram": "string",
@@ -944,7 +944,8 @@ Profile:
 - name: "Neha satya sridevi vadige"
 - tagline: "Gen AI Full Stack Developer"
 - bio: "I design and develop modern web applications with a focus on full-stack development and Generative AI. I love learning new technologies and applying them through hands-on projects."
-- phone: "+91 9121055512"
+- phone: "+91 73370 19534"
+- email: "vadigenehasatyasridevi@gmail.com"
 - linkedin: "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/"
 - github: "https://github.com/vadigenehasatyasridevi-crypto"
 
