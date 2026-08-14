@@ -40,6 +40,15 @@ export const collectionSeeds = {
 
 export type CollectionName = keyof typeof collectionSeeds;
 
+export type Message = {
+  id: string;
+  name: string;
+  email: string;
+  subject?: string;
+  message: string;
+  createdAt?: string;
+};
+
 type Ordered = { id: string; order?: number };
 
 function sortByOrder<T extends Ordered>(rows: T[]) {
@@ -78,12 +87,8 @@ export async function saveProfile(profile: Profile) {
 
 export async function createItem(name: CollectionName, data: Record<string, unknown>) {
   const db = await getDb();
-  await addDoc(collection(db, name), data);
-}
-
-export async function saveMessage(data: Record<string, unknown>) {
-  const db = await getDb();
-  await addDoc(collection(db, "messages"), { ...data, createdAt: new Date().toISOString() });
+  const res = await addDoc(collection(db, name), data);
+  return res.id;
 }
 
 export async function saveItem(name: CollectionName, id: string, data: Record<string, unknown>) {
@@ -99,7 +104,29 @@ export async function deleteItem(name: CollectionName, id: string) {
   await deleteDoc(doc(db, name, id));
 }
 
-/** Seeds Firestore with the bundled starter content for collections that are empty. */
+export async function saveMessage(data: Record<string, unknown>) {
+  const db = await getDb();
+  await addDoc(collection(db, "messages"), { ...data, createdAt: new Date().toISOString() });
+}
+
+export async function fetchMessages(): Promise<Message[]> {
+  try {
+    const db = await getDb();
+    const snap = await getDocs(collection(db, "messages"));
+    const list = snap.docs.map((d) => ({ id: d.id, ...d.data() }) as Message);
+    return list.sort((a, b) => (b.createdAt || "").localeCompare(a.createdAt || ""));
+  } catch (error) {
+    console.warn("[content] failed to fetch messages", error);
+    return [];
+  }
+}
+
+export async function deleteMessage(id: string) {
+  const db = await getDb();
+  await deleteDoc(doc(db, "messages", id));
+}
+
+/** Seeds Firestore with starter content for collections that are empty. */
 export async function seedFirestoreIfEmpty() {
   const db = await getDb();
   const profileRef = doc(db, "profile", "main");
@@ -109,6 +136,20 @@ export async function seedFirestoreIfEmpty() {
   for (const name of Object.keys(collectionSeeds) as CollectionName[]) {
     const snap = await getDocs(collection(db, name));
     if (!snap.empty) continue;
+    for (const row of collectionSeeds[name]) {
+      const { id, ...rest } = row as Ordered & Record<string, unknown>;
+      await setDoc(doc(db, name, id), rest);
+    }
+  }
+}
+
+/** Force syncs local seed data to Firestore to quickly initialize an empty database. */
+export async function seedFirestoreForce() {
+  const db = await getDb();
+  const profileRef = doc(db, "profile", "main");
+  await setDoc(profileRef, seedProfile, { merge: true });
+
+  for (const name of Object.keys(collectionSeeds) as CollectionName[]) {
     for (const row of collectionSeeds[name]) {
       const { id, ...rest } = row as Ordered & Record<string, unknown>;
       await setDoc(doc(db, name, id), rest);
