@@ -6,12 +6,12 @@ import type { Certification } from "@/lib/types";
 import { Reveal, Section, SectionHeading } from "./shared";
 
 const LOGO_MAP: Record<string, string> = {
-  "google-ai-pro": "/logos/google.svg",
-  "ai-for-beginners": "/logos/hp.svg",
-  "ai-hackathon-2026": "/logos/xfactor.svg",
-  "enterprise-design-thinking": "/logos/ibm.svg",
+  "google-ai-pro": "/logos/google.png",
+  "ai-for-beginners": "/logos/hp.png",
+  "ai-hackathon-2026": "/logos/xfactor.png",
+  "enterprise-design-thinking": "/logos/ibm.png",
   "ai-skills-passport": "/logos/microsoft.svg",
-  "quizoff-2026": "/logos/unstop.svg",
+  "quizoff-2026": "/logos/unstop.png",
 };
 
 const DEFAULT_CERTIFICATIONS: Certification[] = [
@@ -21,7 +21,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     issuer: "Google · Coursera",
     date: "2026",
     credentialUrl: "",
-    badgeImageUrl: "/logos/google.svg",
+    badgeImageUrl: "/logos/google.png",
     description: "7-course certificate covering AI, prompting, data analysis, and app building.",
     order: 1,
   },
@@ -31,7 +31,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     issuer: "HP LIFE · HP Foundation",
     date: "2026",
     credentialUrl: "",
-    badgeImageUrl: "/logos/hp.svg",
+    badgeImageUrl: "/logos/hp.png",
     description: "Covered AI fundamentals, applications, data, and ethics.",
     order: 2,
   },
@@ -41,7 +41,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     issuer: "X Factor",
     date: "2026",
     credentialUrl: "",
-    badgeImageUrl: "/logos/xfactor.svg",
+    badgeImageUrl: "/logos/xfactor.png",
     description: "Built and deployed an AI-powered project in a 2-day hackathon.",
     order: 3,
   },
@@ -51,7 +51,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     issuer: "IBM SkillsBuild",
     date: "2026",
     credentialUrl: "",
-    badgeImageUrl: "/logos/ibm.svg",
+    badgeImageUrl: "/logos/ibm.png",
     description: "Focused on user-centered problem solving and solution design.",
     order: 4,
   },
@@ -71,7 +71,7 @@ const DEFAULT_CERTIFICATIONS: Certification[] = [
     issuer: "CampusCrew · Unstop",
     date: "2026",
     credentialUrl: "",
-    badgeImageUrl: "/logos/unstop.svg",
+    badgeImageUrl: "/logos/unstop.png",
     description: "Participated in India’s Biggest AI Quiz.",
     order: 6,
   },
