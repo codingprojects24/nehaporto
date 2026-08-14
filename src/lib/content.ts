@@ -105,6 +105,23 @@ export async function fetchProfile(): Promise<Profile> {
     if (!merged.phone || merged.phone.includes("9121055512")) {
       merged.phone = "+91 73370 19534";
     }
+    if (
+      !merged.stats ||
+      merged.stats.length === 0 ||
+      merged.stats.some(
+        (s) =>
+          s.value === "1+" ||
+          s.value === "5+" ||
+          s.label?.toLowerCase().includes("year of experience"),
+      )
+    ) {
+      merged.stats = [
+        { value: "6+", label: "Months of Experience" },
+        { value: "2+", label: "Projects Built" },
+        { value: "∞", label: "Always Improving" },
+        { value: "100%", label: "Dedication" },
+      ];
+    }
     merged.instagram = "";
 
     return merged;
