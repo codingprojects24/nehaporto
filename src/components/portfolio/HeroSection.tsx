@@ -94,12 +94,12 @@ export function HeroSection({ profile }: { profile: Profile }) {
             >
               <h1
                 style={{ fontFamily: "'Poppins', sans-serif" }}
-                className="text-[54px] sm:text-[62px] md:text-[68px] lg:text-[72px] font-extrabold tracking-tight text-slate-950 leading-[1.05]"
+                className="text-[50px] sm:text-[58px] md:text-[64px] lg:text-[68px] font-extrabold tracking-tight text-slate-950 leading-[1.08]"
               >
-                <span className="text-slate-950">Satya</span>
-                <span className="text-blue-600">narayana</span>
+                <span className="text-slate-950">Neha</span>{" "}
+                <span className="text-blue-600">satya</span>
                 <br />
-                <span className="text-slate-950">Chodisetti</span>
+                <span className="text-slate-950">sridevi vadige</span>
                 <span className="text-orange-500 font-bold">.</span>
               </h1>
             </motion.div>

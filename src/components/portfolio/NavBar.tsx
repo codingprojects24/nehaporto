@@ -44,7 +44,7 @@ export function NavBar({ resumeUrl }: { resumeUrl?: string }) {
           style={{ fontFamily: "'Poppins', sans-serif" }}
           className="text-2xl font-black tracking-tight text-slate-900 transition-opacity hover:opacity-80"
         >
-          Satya<span className="text-blue-600">.</span>
+          Neha<span className="text-blue-600">.</span>
         </a>
 
         {/* Navigation Links */}
