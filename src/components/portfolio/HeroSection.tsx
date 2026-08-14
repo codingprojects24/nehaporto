@@ -159,7 +159,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               </div>
 
               {/* Social Buttons - Below on mobile, same row on desktop */}
-              <div className="flex items-center gap-2 sm:gap-2.5">
+              <div className="flex items-center gap-2.5">
                 {[
                   {
                     href:
@@ -186,9 +186,9 @@ export function HeroSection({ profile }: { profile: Profile }) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="inline-flex size-9 sm:size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
+                      className="inline-flex size-[42px] sm:size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
                     >
-                      <Icon className="size-4 sm:size-5" />
+                      <Icon className="size-[19px] sm:size-5" />
                     </a>
                   ))}
               </div>
