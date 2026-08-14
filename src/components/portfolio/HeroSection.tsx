@@ -94,7 +94,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
             >
               <h1
                 style={{ fontFamily: "'Poppins', sans-serif" }}
-                className="text-[38px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-extrabold tracking-tight text-slate-950 leading-[1.12] break-words"
+                className="text-[42px] sm:text-[54px] md:text-[62px] lg:text-[68px] font-extrabold tracking-tight text-slate-950 leading-[1.1] break-words"
               >
                 <span className="text-slate-950">Neha</span>{" "}
                 <span className="text-blue-600">satya</span>
@@ -109,7 +109,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="mt-6 flex flex-col items-start gap-1 font-mono text-base text-slate-700 sm:flex-row sm:items-center sm:gap-2.5 sm:text-lg"
+              className="mt-6 flex flex-col items-start gap-1 font-mono text-[17px] text-slate-700 sm:flex-row sm:items-center sm:gap-2.5 sm:text-lg"
             >
               <div className="flex items-center gap-2 shrink-0">
                 <Sparkles className="size-5 text-orange-400" />
@@ -125,7 +125,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-slate-600"
+              className="mt-6 max-w-xl text-[16.5px] leading-relaxed text-slate-600 sm:text-lg"
             >
               {profile.heroSubtext ||
                 "I craft fast, intelligent and beautifully engineered products — blending modern web stacks with Generative AI to ship experiences that feel inevitable."}
@@ -143,7 +143,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
                 {/* Primary CTA */}
                 <a
                   href="#projects"
-                  className="inline-flex flex-1 sm:flex-none items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-blue-600 px-4 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-base font-semibold text-white shadow-md shadow-blue-500/25 transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 active:scale-95 whitespace-nowrap"
+                  className="inline-flex flex-1 sm:flex-none items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-blue-600 px-4.5 py-3.5 sm:px-7 sm:py-3.5 text-sm sm:text-base font-semibold text-white shadow-md shadow-blue-500/25 transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 active:scale-95 whitespace-nowrap"
                 >
                   <span>View My Work</span>
                   <ArrowDown className="size-3.5 sm:size-4" />
@@ -152,7 +152,7 @@ export function HeroSection({ profile }: { profile: Profile }) {
                 {/* Secondary CTA */}
                 <a
                   href="#contact"
-                  className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-full border border-slate-300/90 bg-white/90 px-4 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-base font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-slate-400 hover:bg-white active:scale-95 whitespace-nowrap"
+                  className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-full border border-slate-300/90 bg-white/90 px-4.5 py-3.5 sm:px-7 sm:py-3.5 text-sm sm:text-base font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-slate-400 hover:bg-white active:scale-95 whitespace-nowrap"
                 >
                   Get In Touch
                 </a>
