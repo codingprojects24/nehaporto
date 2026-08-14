@@ -949,13 +949,11 @@ Profile:
 - linkedin: "https://www.linkedin.com/in/neha-satya-sridevi-vadige-86524a330/"
 - github: "https://github.com/vadigenehasatyasridevi-crypto"
 
-Projects (5 pre-loaded):
+Projects (3 pre-loaded):
 
-1. Mana Nivasam — Real Estate Platform — `https://play.google.com/store/apps/details?id=co.median.android.mpynbb`
-2. DRE Real Estates — `https://devi-real-estates.vercel.app/`
-3. Sreerasthu Silvers — Jewellery E-commerce — `https://sreerasthusilvers.vercel.app/`
-4. Ignite Gym Platform — `https://ignite-prime-experience.vercel.app/`
-5. Flight Ticket Price Predictor — `https://skyprice-predictor-m6qk.vercel.app/`
+1. Ice Cream Sales Prediction — ML Project (Python, Machine Learning)
+2. AI-Powered User Support System — AI Web (Python, Chat Interface, Machine Learning)
+3. Swarm Robotics Simulation — Robotics Simulation (Python, Simulation, Swarm Intelligence)
 
 Experience:
 

@@ -8,8 +8,6 @@ import { cn } from "@/lib/utils";
 
 import { Pill, Reveal, Section, SectionHeading } from "./shared";
 
-const FILTERS = ["All", "Web App", "AI/ML", "Mobile", "E-commerce"];
-
 function Thumb({ project, className }: { project: Project; className?: string }) {
   if (project.thumbnailUrl) {
     return (
@@ -159,20 +157,81 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
   );
 }
 
+const DEFAULT_PROJECTS: Project[] = [
+  {
+    id: "ice-cream-sales-prediction",
+    title: "Ice Cream Sales Prediction",
+    description:
+      "A machine learning project that predicts ice cream sales based on temperature and historical sales data.",
+    longDescription:
+      "A machine learning project that predicts ice cream sales based on temperature and historical sales data. Analyzes correlation between weather features and consumer demand to forecast sales volumes with high accuracy.",
+    techStack: ["Python", "Machine Learning"],
+    liveUrl: "",
+    githubUrl: "https://github.com/vadigenehasatyasridevi-crypto",
+    thumbnailUrl: "",
+    images: [],
+    category: "ML Project",
+    featured: true,
+    order: 1,
+  },
+  {
+    id: "ai-user-support-system",
+    title: "AI-Powered User Support System",
+    description:
+      "An AI-powered support system where users can ask questions through a chat interface and receive instant solutions to their issues.",
+    longDescription:
+      "An AI-powered support system where users can ask questions through a chat interface and receive instant solutions to their issues. Leverages intelligent query parsing and machine learning algorithms for fast troubleshooting.",
+    techStack: ["Python", "Chat Interface", "Machine Learning"],
+    liveUrl: "",
+    githubUrl: "https://github.com/vadigenehasatyasridevi-crypto",
+    thumbnailUrl: "",
+    images: [],
+    category: "AI Web",
+    featured: false,
+    order: 2,
+  },
+  {
+    id: "swarm-robotics-simulation",
+    title: "Swarm Robotics Simulation",
+    description:
+      "An interactive simulation demonstrating multiple robots working together as a team, showcasing swarm intelligence, coordinated movement, and multi-robot behavior.",
+    longDescription:
+      "An interactive simulation demonstrating multiple robots working together as a team, showcasing swarm intelligence, coordinated movement, and multi-robot behavior with decentralized multi-agent synchronization.",
+    techStack: ["Python", "Simulation", "Swarm Intelligence"],
+    liveUrl: "",
+    githubUrl: "https://github.com/vadigenehasatyasridevi-crypto",
+    thumbnailUrl: "",
+    images: [],
+    category: "Robotics Simulation",
+    featured: false,
+    order: 3,
+  },
+];
+
 export function ProjectsSection({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState<Project | null>(null);
 
-  const featured = projects.find((p) => p.featured) ?? projects[0];
-  const rest = projects.filter((p) => p.id !== featured?.id);
+  const activeProjects =
+    projects &&
+    projects.length > 0 &&
+    !projects.some(
+      (p) => p.id === "mana-nivasam" || p.id === "dre-real-estates" || p.id === "skyprice",
+    )
+      ? projects
+      : DEFAULT_PROJECTS;
+
+  const filters = ["All", ...Array.from(new Set(activeProjects.map((p) => p.category)))];
+  const featured = activeProjects.find((p) => p.featured) ?? activeProjects[0];
+  const rest = activeProjects.filter((p) => p.id !== featured?.id);
   const visible = filter === "All" ? rest : rest.filter((p) => p.category === filter);
 
   return (
     <Section id="projects">
       <SectionHeading
         label="Selected Work"
-        title="Projects I've shipped"
-        description="Real products across real estate, commerce, fitness and machine learning."
+        title="Projects I've Built"
+        description="Featured technical projects spanning Machine Learning, AI chat assistants, and Swarm Robotics."
       />
 
       {featured ? (
@@ -211,7 +270,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
       ) : null}
 
       <Reveal className="mt-12 flex flex-wrap justify-center gap-3">
-        {FILTERS.map((f) => (
+        {filters.map((f) => (
           <button
             key={f}
             type="button"
