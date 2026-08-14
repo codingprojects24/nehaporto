@@ -73,7 +73,7 @@ export function ContactSection({ profile }: { profile: Profile }) {
       />
 
       <div className="mt-14 grid gap-10 md:grid-cols-2">
-        <Reveal x={-24} y={0}>
+        <Reveal y={20} className="w-full min-w-0">
           <div className="space-y-4">
             <div className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium">
               <span className="relative flex size-2.5">
@@ -85,28 +85,30 @@ export function ContactSection({ profile }: { profile: Profile }) {
 
             <a
               href={`tel:${displayPhone.replace(/\s/g, "")}`}
-              className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary"
+              className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary w-full min-w-0"
             >
-              <Phone className="size-5 text-primary" aria-hidden />
-              <span>
+              <Phone className="size-5 text-primary shrink-0" aria-hidden />
+              <span className="min-w-0 flex-1">
                 <span className="block text-xs uppercase tracking-wide text-muted-foreground">
                   Phone
                 </span>
-                <span className="font-medium">{displayPhone}</span>
+                <span className="font-medium break-words">{displayPhone}</span>
               </span>
             </a>
 
             {displayEmail ? (
               <a
                 href={`mailto:${displayEmail}`}
-                className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary"
+                className="lift flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 hover:border-primary w-full min-w-0"
               >
-                <Mail className="size-5 text-primary" aria-hidden />
-                <span>
+                <Mail className="size-5 text-primary shrink-0" aria-hidden />
+                <span className="min-w-0 flex-1">
                   <span className="block text-xs uppercase tracking-wide text-muted-foreground">
                     Email
                   </span>
-                  <span className="font-medium">{displayEmail}</span>
+                  <span className="font-medium text-sm sm:text-base break-all block">
+                    {displayEmail}
+                  </span>
                 </span>
               </a>
             ) : null}
@@ -128,12 +130,12 @@ export function ContactSection({ profile }: { profile: Profile }) {
           </div>
         </Reveal>
 
-        <Reveal x={24} y={0}>
+        <Reveal y={20} className="w-full min-w-0">
           <motion.form
             onSubmit={submit}
             animate={status === "error" ? { x: [0, -10, 10, -6, 6, 0] } : { x: 0 }}
             transition={{ duration: 0.4 }}
-            className="rounded-3xl border border-border bg-surface p-8 shadow-elegant"
+            className="rounded-3xl border border-border bg-surface p-6 sm:p-8 shadow-elegant w-full"
           >
             <div className="space-y-6">
               {FIELDS.map((field) => (
