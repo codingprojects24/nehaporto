@@ -121,11 +121,11 @@ SECTION 2 — DESIGN SYSTEM (ATOMIC TOKENS)
 
 ```css
 /* Import from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 :root {
-  --font-display: "Syne", sans-serif; /* Headings — geometric, bold */
-  --font-body: "DM Sans", sans-serif; /* Body — clean, modern */
+  --font-display: "Poppins", sans-serif; /* Headings */
+  --font-body: "Poppins", sans-serif; /* Body */
   --font-mono: "JetBrains Mono", monospace; /* Code/tech labels */
 
   /* Scale */
