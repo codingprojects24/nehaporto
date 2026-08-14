@@ -238,8 +238,33 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
         description="Featured technical projects spanning Machine Learning, AI chat assistants, and Swarm Robotics."
       />
 
+      {/* Mobile Projects Grid: Card & Title only */}
+      <div className="mt-10 grid grid-cols-2 gap-3.5 md:hidden">
+        {activeProjects.map((project) => (
+          <button
+            key={project.id}
+            type="button"
+            onClick={() => setSelected(project)}
+            className="lift group flex flex-col overflow-hidden rounded-2xl border border-border bg-surface text-left shadow-sm transition-all duration-200 hover:border-primary active:scale-[0.98]"
+          >
+            <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+              <Thumb
+                project={project}
+                className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-3">
+              <h3 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                {project.title}
+              </h3>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {/* Desktop Featured Project (md+ only) */}
       {featured ? (
-        <Reveal className="mt-14">
+        <Reveal className="mt-14 hidden md:block">
           <button
             type="button"
             onClick={() => setSelected(featured)}
@@ -273,7 +298,8 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
         </Reveal>
       ) : null}
 
-      <Reveal className="mt-12 flex flex-wrap justify-center gap-3">
+      {/* Desktop Filter Pills (md+ only) */}
+      <Reveal className="mt-12 hidden md:flex flex-wrap justify-center gap-3">
         {filters.map((f) => (
           <button
             key={f}
@@ -291,7 +317,8 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
         ))}
       </Reveal>
 
-      <motion.div layout className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Desktop Remaining Projects Grid (md+ only) */}
+      <motion.div layout className="mt-10 hidden md:grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout">
           {visible.map((project) => (
             <motion.button
