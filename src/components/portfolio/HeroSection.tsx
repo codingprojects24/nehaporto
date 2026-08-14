@@ -104,16 +104,20 @@ export function HeroSection({ profile }: { profile: Profile }) {
               </h1>
             </motion.div>
 
-            {/* Typewriter Line */}
+            {/* Typewriter Line - Stacked on mobile, inline on desktop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              className="mt-6 flex items-center gap-2.5 font-mono text-base sm:text-lg text-slate-700"
+              className="mt-6 flex flex-col items-start gap-1 font-mono text-base text-slate-700 sm:flex-row sm:items-center sm:gap-2.5 sm:text-lg"
             >
-              <Sparkles className="size-5 text-orange-400" />
-              <span>I&apos;m a</span>
-              <Typewriter />
+              <div className="flex items-center gap-2 shrink-0">
+                <Sparkles className="size-5 text-orange-400" />
+                <span>I&apos;m a</span>
+              </div>
+              <div className="pl-7 sm:pl-0">
+                <Typewriter />
+              </div>
             </motion.div>
 
             {/* Bio Paragraph */}
@@ -127,32 +131,35 @@ export function HeroSection({ profile }: { profile: Profile }) {
                 "I craft fast, intelligent and beautifully engineered products — blending modern web stacks with Generative AI to ship experiences that feel inevitable."}
             </motion.p>
 
-            {/* Buttons & Socials Row */}
+            {/* Buttons & Socials Row - Stacked on mobile, single row on desktop */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.5 }}
-              className="mt-8 flex flex-wrap items-center gap-3.5"
+              className="mt-8 flex flex-col items-start gap-3.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3.5"
             >
-              {/* Primary CTA */}
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3.5 text-sm sm:text-base font-semibold text-white shadow-md shadow-blue-500/25 transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 active:scale-95"
-              >
-                <span>View My Work</span>
-                <ArrowDown className="size-4" />
-              </a>
+              {/* CTAs - Side-by-side on mobile, inline on desktop */}
+              <div className="flex w-full items-center gap-2.5 sm:w-auto sm:gap-3.5">
+                {/* Primary CTA */}
+                <a
+                  href="#projects"
+                  className="inline-flex flex-1 sm:flex-none items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-blue-600 px-4 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-base font-semibold text-white shadow-md shadow-blue-500/25 transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 active:scale-95 whitespace-nowrap"
+                >
+                  <span>View My Work</span>
+                  <ArrowDown className="size-3.5 sm:size-4" />
+                </a>
 
-              {/* Secondary CTA */}
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-300/90 bg-white/90 px-7 py-3.5 text-sm sm:text-base font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-slate-400 hover:bg-white active:scale-95"
-              >
-                Get In Touch
-              </a>
+                {/* Secondary CTA */}
+                <a
+                  href="#contact"
+                  className="inline-flex flex-1 sm:flex-none items-center justify-center rounded-full border border-slate-300/90 bg-white/90 px-4 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-base font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all duration-150 hover:border-slate-400 hover:bg-white active:scale-95 whitespace-nowrap"
+                >
+                  Get In Touch
+                </a>
+              </div>
 
-              {/* Social Buttons */}
-              <div className="flex items-center gap-2.5">
+              {/* Social Buttons - Below on mobile, same row on desktop */}
+              <div className="flex items-center gap-2 sm:gap-2.5">
                 {[
                   {
                     href:
@@ -179,9 +186,9 @@ export function HeroSection({ profile }: { profile: Profile }) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="inline-flex size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
+                      className="inline-flex size-9 sm:size-12 items-center justify-center rounded-full border border-slate-200/90 bg-white text-slate-700 shadow-sm transition-all duration-150 hover:scale-110 hover:border-blue-500 hover:text-blue-600"
                     >
-                      <Icon className="size-5" />
+                      <Icon className="size-4 sm:size-5" />
                     </a>
                   ))}
               </div>
